@@ -1,0 +1,20 @@
+{
+  "name": "sault",
+  "version": "1.0.0",
+  "description": "瀑布流布局",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "瀑布流"
+  ],
+  "author": "DahengZhang",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "open": "0.0.5"
+  }
+}

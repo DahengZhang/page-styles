@@ -1,0 +1,11 @@
+.box {
+  padding: 10px;
+  border-radius: 5px;
+  float: left;
+}
+.picture {
+  box-shadow: 5px 5px 10px 0 #CCCCCC;
+}
+.picture img {
+  width: 180px;
+}
