@@ -2,10 +2,16 @@
   text-align: center;
   /* 每列列宽 */
   -webkit-column-width: 180px;
+  -webkit-column-fill: auto;
   /* 列间样式 */
   -webkit-column-rule: 2px dashed #fCFCFC;
   /* 分为多少列显示 */
   // -webkit-column-count: 10;
   /* 列间距 */
   -webkit-column-gap: 10px;
+  -webkit-column-span: all;
+  column-span: all;
+}
+.box {
+	-webkit-column-break-inside: avoid;
 }

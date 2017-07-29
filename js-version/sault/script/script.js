@@ -11,12 +11,26 @@ function sault(wrapper, box) {
   var columnNum = Math.floor(document.documentElement.clientWidth / boxWidth)
   // 设置包裹层的宽度
   wrapperElm.style.cssText = 'width: '+ columnNum * boxWidth +'px; margin: 0 auto'
-  var hArr = []
+  var heightArr = []
   for (var i=0; i<boxElms.length; i++) {
     if (i < columnNum) {
-      hArr.push(boxElms[i].offsetWidth)
+      heightArr.push(boxElms[i].offsetHeight)
     } else {
-      var minHeight = Math.min.apply(null, hArr)
+      var minHeight = Math.min.apply(null, heightArr)
+      var minIndex = getMinHeightIndex(heightArr, minHeight)
+      boxElms[i].style.position = 'absolute'
+      console.log(minIndex+", "+minHeight)
+      boxElms[i].style.top = minHeight+'px'
+      boxElms[i].style.left = boxElms[minIndex].offsetLeft+'px'
+      heightArr[minIndex] += boxElms[i].offsetHeight
+    }
+  }
+}
+
+function getMinHeightIndex(arr,val) {
+  for (var i in arr) {
+    if (arr[i] == val) {
+      return i
     }
   }
 }

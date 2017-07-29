@@ -1,3 +1,6 @@
+#wrapper {
+  position: relative;
+}
 .box {
   padding: 10px;
   border-radius: 5px;
@@ -5,6 +8,7 @@
 }
 .picture {
   box-shadow: 5px 5px 10px 0 #CCCCCC;
+  font-size: 0;
 }
 .picture img {
   width: 180px;
